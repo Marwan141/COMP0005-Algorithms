@@ -1,5 +1,5 @@
 class EagerApproach:
-
+    #uses one list initiliased to each index, later will store the root.
     def __init__(self, n):
         self.id = []
         self.N = n
@@ -20,6 +20,7 @@ class EagerApproach:
 
 
 class LazyApproach:
+    #uses trees, so root will have the same root as it's own value.
     def __init__(self, n):
         self.id = []
         self.N = n
@@ -30,7 +31,7 @@ class LazyApproach:
         if self.id[u] == u:
             return u
         else:
-            self.root(self.id[u])
+            return self.root(self.id[u])
 
     def union(self, u, v):
         r_u = self.root(u)
@@ -42,6 +43,7 @@ class LazyApproach:
     
 
 class ImprovedLazyApproach:
+    #Same here but maximases performance for union operations by minimising the amount of comparisons, as root will be the smaller tree.
     def __init__(self, n):
         self.id = []
         self.size = []
@@ -54,7 +56,7 @@ class ImprovedLazyApproach:
         if self.id[u] == u:
             return u
         else:
-            self.root(self.id[u])
+            return self.root(self.id[u])
 
     def union(self, u, v):
         r_u = self.root(u)
