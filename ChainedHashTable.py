@@ -1,3 +1,6 @@
+#Hash table but where collisions are handled using Chains (Linked List)
+#Best Case: O(1)
+#Worst Case: Log N
 class ChainedHashTable:
     class Node:
         def __init__(self, key, value) -> None:

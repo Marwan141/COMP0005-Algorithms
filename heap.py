@@ -32,3 +32,6 @@ class Heap:
                 break
             self.a[i], self.a[j] = self.a[j], self.a[i]
             i = j
+
+
+            
