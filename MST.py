@@ -11,7 +11,7 @@ class EdgeWeightedGraph:
         w = e.otherEndPoint(v)
         self.adj[v].add(e)
         self.adj[w].add(e)
-        
+
     def adj (self, v):
         return self.adj[v]
 
@@ -34,8 +34,6 @@ class KruskalMST:
             
     def edges(self):
         return self.mst
-
-
 
 
 class LazyPrimMST:

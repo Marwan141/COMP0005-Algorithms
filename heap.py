@@ -32,6 +32,14 @@ class Heap:
                 break
             self.a[i], self.a[j] = self.a[j], self.a[i]
             i = j
+    def heapSort(self):
+        #In Place
+        #O(NlogN)
+        #Not stable
+        N = self.N
+        for i in range(N,-1,-1):
+           self.sink(i) 
+        while(N>1):
+           self.a[1],self.a[N] = self.a[N],self.a[1]
+           N -= 1
 
-
-            
