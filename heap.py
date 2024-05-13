@@ -37,7 +37,7 @@ class Heap:
         #O(NlogN)
         #Not stable
         N = self.N
-        for i in range(N,-1,-1):
+        for i in range(N//2,-1,-1):
            self.sink(i) 
         while(N>1):
            self.a[1],self.a[N] = self.a[N],self.a[1]
