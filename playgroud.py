@@ -52,26 +52,28 @@ class Prim:
 
 def partition(a, lo,hi):
     i = lo
-    j = hi+1
+    j = hi + 1
     p = a[lo]
     while True:
-        while(a[i] < p):
+        i += 1
+        while (a[i] < p):
             i += 1
-            if i == hi:
+            if (i >= hi):
                 break
-        while (p < a[j]):
-            j -= 1
-            if j == lo:
+        j -= 1
+        while (a[j] > p):
+            j-= 1
+            if (j <= lo):
                 break
-        if i >= j:
+        if (i >= j):
             break
-        swap(a[i],a[j])
+        swap(a[i], a[j])
     swap(a[lo],a[j])
     return j
 
 def sort(a,lo,hi):
-    if hi<=lo:
+    if (hi <= lo):
         return
     j = partition(a,lo,hi)
-    sort(a,lo,j-1)
-    sort(a,j, hi)
+    sort(a, lo, j-1)
+    sort(a,j+1, hi)

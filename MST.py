@@ -61,6 +61,6 @@ class LazyPrimMST:
             if (not self.marked[e.otherEndPoint(V)]):
                 self.pq.insert(e)
     
-    def edged(self):
+    def edges(self):
         return self.mst
             

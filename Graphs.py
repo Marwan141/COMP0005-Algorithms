@@ -54,8 +54,8 @@ class BFS:
         while (x != s):
             path.push(x)
             x = self.edgeTo[x]
-            path.push(s)
-            return path
+        path.push(s)
+        return path
 
 
 class ConnectedComponents:
